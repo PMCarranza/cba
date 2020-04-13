@@ -36,6 +36,11 @@ main{
     font-size: 2vw;
 }
 
+/* form{
+    display: flex;
+    flex-direction: column;
+} */
+
 body > main > form > p{
     margin-bottom: 1.5%;
 }
@@ -47,10 +52,6 @@ body > main > form > p{
 
 #nope{
     margin-bottom: 2.5%;
-}
-
-.form{
-    display: none;
 }
 
 #text-area{

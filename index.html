@@ -16,7 +16,7 @@
         <h1 class="top-text">COMMUNITY BREAKFAST AURORA</h1>
     </header>
     <div>
-        <h2>We are serving on tuesday is April the 14th</h2>
+        <h2>We are serving on tuesday April the 14th</h2>
     </div>
 
     <main>
@@ -24,21 +24,33 @@
             <label>Name:</label>
             <input type="text" id="name" name="name">
 
-            <p>Are you bringing something?</p>
+            <p>Are you planning to bring something?</p>
             <label for="yes">Yes</label>
-            <input type="radio" id="yes" name="choice" value="yes">
+            <input type="radio" id="one" name="choice" value="yes">
             <label for="nope">No</label>
-            <input type="radio" id="nope" name="choice" value="no">
+            <input type="radio" id="two" name="choice" value="no">
 
             <div class="form">
                 <label for="text-area">What are you planning to bring?</label>
-                <textarea class="text-area" name="text-area" id="text-area" wrap="off" placeholder="It is helpful to know what we can count on and what we need to get"></textarea>
+                <textarea class="text-area" name="text-area" id="text-area" wrap="off"
+                    placeholder="It is helpful to know what we can count on and what we need to get"></textarea>
             </div>
+
+            <!-- <br> -->
+
+            <input type="submit" value="submit" id="submit">
         </form>
     </main>
 
-    <section>
-        <p>See who will be there</p>
+    <section id="results">
+
+        <div id="attendees">
+            <p>attending</p>
+        </div>
+
+        <div id="provided">
+            <p>Provisions</p>
+        </div>
 
     </section>
 
@@ -46,6 +58,30 @@
         <p>Feel free to email me if you have any questions <a href="mailto:marino.carranza@gmail.com">Email Mariño.</a>
         </p>
     </footer>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <!-- <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDhNmbTZWrHTqKgtArs2VVbQtXr3u-uMSo",
+            authDomain: "bcc-cba.firebaseapp.com",
+            databaseURL: "https://bcc-cba.firebaseio.com",
+            projectId: "bcc-cba",
+            storageBucket: "bcc-cba.appspot.com",
+            messagingSenderId: "161391316380",
+            appId: "1:161391316380:web:39048cd5a8a8a0a7398c59"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script> -->
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="./javascript/javascript.js"></script>
 </body>
 
 </html>
