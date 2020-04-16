@@ -36,11 +36,6 @@ main{
     font-size: 2vw;
 }
 
-/* form{
-    display: flex;
-    flex-direction: column;
-} */
-
 body > main > form > p{
     margin-bottom: 1.5%;
 }
@@ -57,4 +52,13 @@ body > main > form > p{
 #text-area{
     margin-top: 1.5%;
     width: 75%;
+}
+
+#results{
+    display: flex;
+    flex-direction: row;
+}
+
+#results > p{
+    margin-left: 5%;
 }
