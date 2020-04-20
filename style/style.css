@@ -41,7 +41,6 @@ h2{
     font-weight: bold;
     text-align: center;
     background-color: #496741;
-    margin-bottom: 5%;
 }
 
 main{
@@ -54,7 +53,7 @@ main{
 #name{
     border: none;
     padding: .75%;
-    font-size: 1.5vw;
+    font-size: 2vw;
     width: 50%;
     margin-left: 25%;
     margin-bottom: 2.5%;
@@ -63,7 +62,7 @@ main{
 
 #form{
     font-size: 2vw;
-    margin: 2.5%;
+    margin: 10% 2.5%;
     width: 75%;
 }
 
@@ -74,13 +73,14 @@ main{
 }
 
 form > p{
-    margin-bottom: 2.5%;
+    margin-bottom: 5%;
     text-align: center;
 }
 
 .yes-no{
     display: flex;
     justify-content: center;
+    margin-bottom: 5%;
 }
 
 #one{
@@ -115,10 +115,10 @@ form > p{
 
 #text-area{
     border-radius: 2vw;
-    margin-top: 2.5%;
+    margin-bottom: 5%;
     border: none;
     padding: 1%;
-    font-size: 1.5vw;
+    font-size: 2vw;
     width: 100%;
     background-color: rgb(221, 221, 218);
 }
