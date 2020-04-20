@@ -16,7 +16,7 @@ body{
 }
 
 header{
-    background-color: #959597;
+    background-color: #496741;
 }
 
 #logo{
@@ -27,7 +27,7 @@ header{
 
 .top-text{
     color:whitesmoke;
-    font-size: 4vw;
+    font-size: 5vw;
     text-shadow: 1vw 1vw .5vw slategrey;
     font-weight: bold;
     text-align: center;
@@ -40,7 +40,7 @@ h2{
     padding: 2%;
     font-weight: bold;
     text-align: center;
-    background-color: #959597;
+    background-color: #496741;
 }
 
 main{
@@ -116,7 +116,7 @@ form > p{
     border-radius: 2vw;
     margin-top: 2.5%;
     border: none;
-    padding: 1%;
+    padding: .75%;
     font-size: 1.5vw;
     width: 100%;
     background-color: rgb(221, 221, 218);
@@ -181,7 +181,7 @@ footer{
     display: flex;
     justify-content: center;
     padding: 2%;
-    background-color: #959597;
+    background-color: #496741;
 }
 
 footer a{
