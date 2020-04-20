@@ -1,41 +1,44 @@
 html{
     height: 100%;
-    background-color: #e4f3f7;
     font-family: Arial, Helvetica, sans-serif;
     background-size: auto;
-    color: rgb(73, 96, 119);
+    color: #47484d;
     }
 
 header{
-    margin-top: 2.5%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-bottom: 5%;
+    background-color: #959597;
 }
 
 #logo{
-    width: 25%;
+    float: left;
+    margin: 1%;
+    width: 15%;
 }
 
 .top-text{
+    color:whitesmoke;
     font-size: 4vw;
-    text-shadow: 1vw 1vw .5vw gray;
+    text-shadow: 1vw 1vw .5vw slategrey;
     font-weight: bold;
+    text-align: center;
+    padding: 2%;
 }
 
 h2{
+    color: whitesmoke;
     font-size: 4vw;
+    padding: 2%;
     font-weight: bold;
     text-align: center;
+    background-color: #959597;
+
 }
 
 main{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 2.5%;
+    margin: 2.5% 0;
     font-size: 2vw;
 }
 
@@ -46,11 +49,10 @@ main{
     width: 50%;
     margin-left: 25%;
     margin-bottom: 2.5%;
+    background-color: rgb(221, 221, 218);
 }
 
 #form{
-    /* display: flex; */
-    flex-direction: column;
     font-size: 2vw;
     margin: 2.5%;
     width: 75%;
@@ -59,8 +61,7 @@ main{
 .form{
     font-size: 2vw;
     margin: 2.5%;
-    justify-content: center;
-    width: 100%;
+    width: 90%;
 }
 
 form > p{
@@ -68,12 +69,16 @@ form > p{
     text-align: center;
 }
 
+.yes-no{
+    display: flex;
+    justify-content: center;
+}
+
 #one{
     font-size: 2vw;
     font-weight: bold;
     width: 20%;
-    margin-left: 30%;
-    background-color: rgb(19, 115, 211);
+    background-color: #54b67f;
     opacity: .5;
     border-radius: 2vw;
     border: none;
@@ -83,7 +88,7 @@ form > p{
     font-size: 2vw;
     font-weight: bold;
     width: 20%;
-    background-color: rgb(19, 115, 211);
+    background-color: #54b67f;
     opacity: .5;
     border-radius: 2vw;
     border: none;
@@ -105,11 +110,18 @@ form > p{
     padding: .75%;
     font-size: 1.5vw;
     width: 100%;
+    background-color: rgb(221, 221, 218);
+}
+
+
+.submit{
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: center;
 }
 
 #submit{
-    margin-top: 2.5%;
-    background-color: rgb(19, 115, 211);
+    background-color: #54b67f;
     opacity: .5;
     padding: .75%;
     font-size: 2vw;
@@ -117,8 +129,6 @@ form > p{
     width: 50%;
     border: none;
     border-radius: 2vw;
-    align-content: center;
-    margin-left: 25%;
 }
 
 #submit:hover{
@@ -129,16 +139,16 @@ form > p{
 section{
     display: flex;
     justify-content: center;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 #tabla{
     font-size: 2vw;
-    width: 60%;
+    width: 65%;
 }
 
 table, th, td{
-    border: .25vw solid black;
+    border: .25vw solid gray;
     padding: 1.5%;
 }
 
@@ -158,10 +168,11 @@ td{
 
 footer{
     font-size: 2vw;
+    color: whitesmoke;
     display: flex;
     justify-content: center;
     padding: 2%;
-    margin-bottom: 10%;
+    background-color: #959597;
 }
 
 footer a{
