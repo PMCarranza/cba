@@ -41,6 +41,7 @@ h2{
     font-weight: bold;
     text-align: center;
     background-color: #496741;
+    margin-bottom: 5%;
 }
 
 main{
@@ -116,7 +117,7 @@ form > p{
     border-radius: 2vw;
     margin-top: 2.5%;
     border: none;
-    padding: .75%;
+    padding: 1%;
     font-size: 1.5vw;
     width: 100%;
     background-color: rgb(221, 221, 218);
@@ -138,9 +139,11 @@ form > p{
     width: 50%;
     border: none;
     border-radius: 2vw;
+    transition: all .25s ease-in-out;
 }
 
 #submit:hover{
+    transform: scale(1.2);
     opacity: 1;
     color:white;
 }
