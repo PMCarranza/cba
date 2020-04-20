@@ -41,14 +41,12 @@ h2{
     font-weight: bold;
     text-align: center;
     background-color: #959597;
-
 }
 
 main{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 2.5% 0;
     font-size: 2vw;
 }
 
@@ -70,7 +68,6 @@ main{
 
 .form{
     font-size: 2vw;
-    margin: 2.5%;
     width: 90%;
 }
 
@@ -149,7 +146,6 @@ form > p{
 section{
     display: flex;
     justify-content: center;
-    margin-bottom: 10%;
 }
 
 #tabla{
@@ -189,7 +185,3 @@ footer{
 footer a{
     text-decoration: none;
 }
-
-/* .footer{
-    flex-shrink: 0;
-} */
