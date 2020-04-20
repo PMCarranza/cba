@@ -67,6 +67,7 @@ main{
 }
 
 .form{
+    margin: 0 5%;
     font-size: 2vw;
     width: 90%;
 }
@@ -112,9 +113,10 @@ form > p{
 }
 
 #text-area{
+    border-radius: 2vw;
     margin-top: 2.5%;
     border: none;
-    padding: .75%;
+    padding: 1%;
     font-size: 1.5vw;
     width: 100%;
     background-color: rgb(221, 221, 218);
