@@ -12,20 +12,22 @@
 
 <body>
     <header>
-        <!-- <div> -->
+        <div>
             <a href="https://churchbcc.org/north"><img src="./images/logo.png" id="logo" alt="BCC logo"></a>
-        <!-- </div> -->
+        </div>
         <h1 class="top-text">Community Breakfast Aurora</h1>
     </header>
     <div id="serving">
         <h2>Join us on April the 28th</h2>
     </div>
 
-    <main>
+    <main class="content">
+
         <form id="form">
             <!-- <label>Name:</label> -->
-            <input type="text" id="name" name="name" placeholder="Name:">
-
+            <div id="name-field">
+                <input type="text" id="name" name="name" placeholder="Name:">
+            </div>
             <p>Would you be interested in bringing something?</p>
             <!-- <label for="yes">Yes</label> -->
             <div class="yes-no">
@@ -43,19 +45,20 @@
                 <input type="submit" value="Check in" id="submit">
             </div>
         </form>
+
+        <section class="content">
+            <table id="tabla">
+                <tr>
+                    <th id="th-names">Coming</th>
+                    <th>Providing</th>
+                </tr>
+                <tbody id="cuerpo">
+
+                </tbody>
+            </table>
+        </section>
     </main>
 
-    <section class="content">
-        <table id="tabla">
-            <tr>
-                <th id="th-names">Coming</th>
-                <th>Providing</th>
-            </tr>
-            <tbody id="cuerpo">
-
-            </tbody>
-        </table>
-    </section>
 
     <footer class="footer">
         <p>Feel free to email me if you have any questions <a href="mailto:marino.carranza@gmail.com">Email Mariño.</a>

@@ -41,13 +41,24 @@ h2{
     font-weight: bold;
     text-align: center;
     background-color: #496741;
+    margin-bottom: 2.5%;
 }
 
 main{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     font-size: 2vw;
+}
+
+#form{
+    width: 95%;
+    font-size: 2vw;
+}
+
+#name-field{
+    display: flex;
+    justify-content: center;
 }
 
 #name{
@@ -55,31 +66,24 @@ main{
     padding: .75%;
     font-size: 2vw;
     width: 50%;
-    margin-left: 25%;
     margin-bottom: 2.5%;
     background-color: rgb(221, 221, 218);
 }
 
-#form{
+.form{
+    margin: 0 auto;
     font-size: 2vw;
-    margin: 10% 2.5%;
     width: 75%;
 }
 
-.form{
-    margin: 0 5%;
-    font-size: 2vw;
-    width: 90%;
-}
-
 form > p{
-    margin-bottom: 5%;
+    margin-bottom: 2.5%;
     text-align: center;
 }
 
 .yes-no{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-bottom: 5%;
 }
 
@@ -113,8 +117,11 @@ form > p{
     color:white;
 }
 
+.text-area{
+    display: flex;
+    justify-content: center;
+}
 #text-area{
-    border-radius: 2vw;
     margin-bottom: 5%;
     border: none;
     padding: 1%;
@@ -128,6 +135,7 @@ form > p{
     margin-top: 2.5%;
     display: flex;
     justify-content: center;
+    margin-bottom: 5%;
 }
 
 #submit{
@@ -136,7 +144,7 @@ form > p{
     padding: .75%;
     font-size: 2vw;
     font-weight: bold;
-    width: 50%;
+    width: 25%;
     border: none;
     border-radius: 2vw;
     transition: all .25s ease-in-out;
@@ -155,7 +163,8 @@ section{
 
 #tabla{
     font-size: 2vw;
-    width: 65%;
+    width: 70%;
+    margin-bottom: 5%;
 }
 
 table, th, td{
@@ -189,4 +198,8 @@ footer{
 
 footer a{
     text-decoration: none;
+}
+
+.footer{
+    flex-shrink: 0;
 }
