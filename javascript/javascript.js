@@ -23,6 +23,10 @@ $('#submit').on('click', function (collect) {
     collect.preventDefault();
 
     var name = $('#name').val().trim();
+    if (!name) {
+        alert('Please add your name before submitting');
+        return;
+    };
 
     var bringing = $('#text-area').val().trim();
 

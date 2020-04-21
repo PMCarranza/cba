@@ -53,7 +53,7 @@ main{
 
 #form{
     width: 95%;
-    font-size: 2vw;
+    font-size: 125%;
 }
 
 #name-field{
@@ -64,7 +64,7 @@ main{
 #name{
     border: none;
     padding: .75%;
-    font-size: 2vw;
+    font-size: 100%;
     width: 50%;
     margin-bottom: 2.5%;
     background-color: rgb(221, 221, 218);
@@ -88,7 +88,7 @@ form > p{
 }
 
 #one{
-    font-size: 2vw;
+    font-size: 125%;
     font-weight: bold;
     width: 20%;
     background-color: #54b67f;
@@ -98,7 +98,7 @@ form > p{
 }
 
 #two{
-    font-size: 2vw;
+    font-size: 125%;
     font-weight: bold;
     width: 20%;
     background-color: #54b67f;
@@ -125,7 +125,7 @@ form > p{
     margin-bottom: 5%;
     border: none;
     padding: 1%;
-    font-size: 2vw;
+    font-size: 125%;
     width: 100%;
     background-color: rgb(221, 221, 218);
 }
@@ -142,7 +142,7 @@ form > p{
     background-color: #54b67f;
     opacity: .5;
     padding: .75%;
-    font-size: 2vw;
+    font-size: 125%;
     font-weight: bold;
     width: 25%;
     border: none;
@@ -162,7 +162,7 @@ section{
 }
 
 #tabla{
-    font-size: 2vw;
+    font-size: 125%;
     width: 70%;
     margin-bottom: 5%;
 }
@@ -188,7 +188,7 @@ td{
 
 footer{
     flex-shrink: 0;
-    font-size: 2vw;
+    font-size: 3vw;
     color: whitesmoke;
     display: flex;
     justify-content: center;

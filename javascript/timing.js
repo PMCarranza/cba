@@ -6,7 +6,7 @@ function getDates() {
     var firstDate = moment().subtract(6, 'days').startOf('day').toString();
 // console.log('date', firstDate);
 
-var start = moment('2020-04-14');
+var start = moment('2020-04-28');
 // console.log('start ' + start);
 
 // var end = moment(start).day(2 + 14).format('dddd MMM Do');
