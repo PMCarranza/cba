@@ -50,6 +50,7 @@ $('#submit').on('click', function (collect) {
     // clear form
     // the trigger() method is being used to clear the div selected (the fillable form in this case); user inputs the information and on click trigger() clears the form and is ready for the next input  
     $('#form').trigger('reset');
+    $('.form').hide();
 
 });
 
