@@ -1,11 +1,11 @@
 'use strict';
 
 
-
 function getDates() {
-    var firstDate = moment().subtract(6, 'days').startOf('day').toString();
+    // var firstDate = moment().subtract(6, 'days').startOf('day').toString();
 // console.log('date', firstDate);
-
+    
+    // setting start date
 var start = moment('2020-04-14');
 // console.log('start ' + start);
 
@@ -22,7 +22,7 @@ var nextMeet = $('<h2>Join us on </h2>');
 
     for (var i = 0; i < 1; i++) {
         var repeat = moment(start).day(2 + 14);
-        // console.log('start ' + start);
+        console.log('start ' + start);
         start = repeat;
         // console.log('i ' + i);
         // console.log('repeat ' + repeat);
@@ -31,6 +31,7 @@ var nextMeet = $('<h2>Join us on </h2>');
         // console.log('formatted ' + formatted);
         nextMeet.append(formatted);
         $('#serving').append(nextMeet);
+        $('#cuerpo').empty();
     }
 };
 

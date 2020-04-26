@@ -14,18 +14,45 @@ body{
 
 }
 
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #496741;
+}
+
+#logo{
+    width: 30%;
+}
+
+#logo > a > img{
+    width: 50%;
+    margin: 4%;
+}
+
+#nav-text{
+    font-size: 2vw;
+    color: whitesmoke;
+    margin: 2%;
+}
+
+#nav-text a{
+    color: whitesmoke;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#nav-text a:hover{
+    color: slategrey;
+}
+
+
 header{
     background-color: #496741;
 }
 
-body > header > div > a > img{
-    float: left;
-    margin: 1%;
-    width: 15%;
-}
-
 .top-text{
-    font-size: 5vw;
+    font-size: 6vw;
     color:whitesmoke;
     -webkit-text-stroke: .25vw whitesmoke;
     text-shadow: 1vw 1vw .5vw slategrey;
@@ -100,7 +127,7 @@ th{
     background-color: slategray;
 }
 
-footer{
+/* footer{
     flex-shrink: 0;
     font-size: 2vw;
     color: whitesmoke;
@@ -114,4 +141,4 @@ footer > p{
 footer a{
     text-decoration: none;
     cursor: pointer;
-}
+} */
