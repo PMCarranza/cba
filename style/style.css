@@ -14,15 +14,13 @@ body{
 
 }
 
-.nav-bar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+nav{
     background-color: #496741;
 }
 
 #logo{
     width: 30%;
+    float: left;
 }
 
 #logo > a > img{
@@ -71,7 +69,7 @@ h2{
 }
 
 #name{
-    margin-bottom: 2.5%;
+    margin-bottom: 1.5%;
 }
 
 .content{
@@ -82,6 +80,22 @@ main{
     display: flex;
     flex-direction: column;
 }
+
+/* #dropdownMenu2{
+    width: 100%;
+    margin-bottom: 12%;
+}
+
+#form > div.tuesdays > div > div{
+    font-size: 1.5vw;
+    border: none;
+    width: 100%;
+}
+
+#form > div.tuesdays > div > div > button{
+    font-size: 2vw;
+    text-align: center;
+} */
 
 #dropdownMenuButton{
     font-size: 2.5vw;
