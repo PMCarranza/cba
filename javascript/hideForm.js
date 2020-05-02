@@ -1,10 +1,8 @@
 'use strict';
 
-console.log('hideform');
-
 // hide input form until yes is chosen
 $('.form').hide();
-clearTable();
+// clearTable();
 
 // fillable form to be shown only if something will be brought
 $('#yes').on('click', function () {
@@ -27,10 +25,34 @@ $('#no').on('click', function () {
     }
 });
 
-// clears table in order of tuesdays
-// console.log(moment().format('dddd'));
-function clearTable() {
-    if (moment().weekday() === 2) {
+// variable gets the day of the week to use in the switch statement
+var day = (moment().day());
+console.log('day -> ' + day);
+
+// switch statement, tables get cleared according to the tuesday in the month
+switch (day) {
+    case 2:
+        console.log('first day -> ' + day);
         $('#first-body').hide();
-    };
+        break;
+    case 9:
+        console.log('second day -> ' + day);
+        $('#second-body').hide();
+        break;
+    case 16:
+        console.log('third day -> ' + day);
+        $('#third-body').hide();
+        break;
+    case 23:
+        console.log('fourth day -> ' + day);
+        $('#fourth-body').hide();
 };
+
+
+// clears table in order of tuesdays  USE IT IN CASE SWITCH DOES NOT WORK
+// console.log(moment().format('dddd'));
+// function clearTable() {
+//     if (moment().weekday() === 2) {
+//         $('#first-body').hide();
+//     };
+// };

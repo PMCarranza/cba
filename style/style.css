@@ -95,13 +95,15 @@ main{
 }
 
 #dropdownMenuButton:hover{
-    font-size: 2vw;
     background-color: slategrey;
     opacity: .5;
 }
 
-div.dropdown.show > div{
+#form > div.botones > div.dropdown.show > div{
+    font-size: 2vw;
+    width: 100%;
     text-align: center;
+    min-width: 0;
 }
 
 div.dropdown.show > div:hover{
