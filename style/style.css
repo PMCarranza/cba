@@ -11,65 +11,59 @@ body{
     display: flex;
     flex-direction: column;
     max-width: 100%;
-
 }
 
-nav{
-    background-color: #496741;
+#photo > img{
+    max-width: 100%;
+    opacity: .6;
+    position: absolute;
+    z-index: -2;
 }
 
 #logo{
-    width: 30%;
+    width: 10%;
     float: left;
 }
 
 #logo > a > img{
-    width: 50%;
-    margin: 4%;
+    width: 100%;
+    margin: 8%;
+}
+
+header{
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    margin: 2%;
+}
+
+.top-text{
+    font-size: 5vw;
+    color:whitesmoke;
+    -webkit-text-stroke: .2vw whitesmoke;
+    text-shadow: 1vw 1vw 1vw black;
+}
+
+h2{
+    color: bisque;
+    font-size: 4vw;
+    -webkit-text-stroke: .15vw bisque;
+    text-align: center;
+    /* background-color: #4e5f35; */
+    text-shadow: 1vw 1vw 1vw black;
+    padding: 1%;
+    margin: 0;
 }
 
 #nav-text{
     font-size: 2vw;
     color: whitesmoke;
-    margin: 2%;
-}
-
-#nav-text a{
-    color: whitesmoke;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-#nav-text a:hover{
-    color: slategrey;
-}
-
-
-header{
-    background-color: #496741;
-}
-
-.top-text{
-    font-size: 6vw;
-    color:whitesmoke;
-    -webkit-text-stroke: .25vw whitesmoke;
-    text-shadow: 1vw 1vw .5vw slategrey;
+    background-color: #4e5f35;
     text-align: center;
-    padding: 2%;
-}
-
-h2{
-    color: whitesmoke;
-    font-size: 4vw;
-    -webkit-text-stroke: .15vw whitesmoke;
-    text-align: center;
-    background-color: #496741;
-    padding: 2%;
+    padding: .5%;
     margin-bottom: 2.5%;
-}
-
-#name{
-    margin-bottom: 1.5%;
 }
 
 .content{
@@ -81,78 +75,119 @@ main{
     flex-direction: column;
 }
 
-/* #dropdownMenu2{
-    width: 100%;
-    margin-bottom: 12%;
-}
-
-#form > div.tuesdays > div > div{
-    font-size: 1.5vw;
-    border: none;
-    width: 100%;
-}
-
-#form > div.tuesdays > div > div > button{
+#name{
     font-size: 2vw;
-    text-align: center;
-} */
-
-#dropdownMenuButton{
-    font-size: 2.5vw;
-    width: 100%;
-    margin-bottom: 8%;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.5%;
 }
 
-#form > div.dropdown.show > div.dropdown-menu.show{
-    border: none;
-    width: 100%;
-}
-
-#form > div.dropdown.show > div{
+.botones{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
 }
 
-#one{
-    width: 33%;
-    opacity: .75;
+#dropdownMenuButton{
+    font-size: 2vw;
+    background-color: #4e5f35;
 }
 
-#two{
-    width: 33%;
-    opacity: .75;
+#dropdownMenuButton:hover{
+    font-size: 2vw;
+    background-color: slategrey;
+    opacity: .5;
+}
+
+div.dropdown.show > div{
+    text-align: center;
+}
+
+div.dropdown.show > div:hover{
+    background-color: slategrey;
+}
+
+#text-area{
+    font-size: 1.5vw;
+    width: 50%;
+    margin: 0 auto;
 }
 
 #boton{
-    margin-top: 6%;
+    margin-top: 5%;
     display: flex;
     justify-content: center;
 }
 
 #submit{
+    font-size: 2vw;
+    padding: .5%;
     width: 50%;
     margin: 5% 0;
 }
 
-th{
+.tr-head{
+    font-size: 2vw;
     color: whitesmoke;
-    font-weight: bold;
-    background-color: slategray;
+    width: 100%;
+    background-color: #4e5f35;
+    text-align: center;
+    padding: .5%;
+    margin: 0;
 }
 
-/* footer{
+table{
+    width: 100%;
+    font-size: 2vw;
+    margin-bottom: 5%;
+}
+
+th{
+    text-align: center;
+    border-right: 1px solid whitesmoke;
+    color: whitesmoke;
+    background-color: slategray;
+    padding: .5%;
+}
+
+.th-name{
+    width: 33%;
+}
+
+td{
+    padding: 0 2%;
+}
+
+tr:nth-child(odd) {
+    color: #47484d;
+    background: whitesmoke;
+}
+tr:nth-child(even) {
+    color: whitesmoke;
+    background-color: slategray;
+    opacity: .6;
+}
+
+footer{
     flex-shrink: 0;
     font-size: 2vw;
     color: whitesmoke;
-    background-color: #496741;
+    background-color: #4e5f35;
 }
 
 footer > p{
     text-align: center;
+    margin: 0 auto;
 }
 
 footer a{
-    text-decoration: none;
+    color: whitesmoke;
     cursor: pointer;
-} */
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: cyan;
+    text-decoration: none;
+}

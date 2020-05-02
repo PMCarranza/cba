@@ -1,38 +1,35 @@
 'use strict';
 
+// setting start date
+var start = moment('2020-04-28');
+
+// dom element to append the next serving date
+var nextMeet = $('<h2>Join us on </h2>');
+
+// declaring variable to hold the next serving date
+var repeat;
 
 function getDates() {
-    // var firstDate = moment().subtract(6, 'days').startOf('day').toString();
-// console.log('date', firstDate);
-    
-    // setting start date
-var start = moment('2020-04-14');
-// console.log('start ' + start);
+    // creating dom element to append the next serving date
+    $('#serving').append(nextMeet);
 
-// var end = moment(start).day(2 + 14).format('dddd MMM Do');
-// console.log('end date is ' + end);
+    // if it is tuesday add a week to serving date
+    if (moment().weekday() === 2) {
+        repeat = start.add(1, 'week');
+    };
 
-// var frequency = moment(start).day(2 + 14).format('dddd MMM Do');
-// console.log('frequency ' + frequency);
+    repeat = start.add(1, 'week');
 
-var nextMeet = $('<h2>Join us on </h2>');
-// nextMeet.append(frequency);
+    // variable gets the formatted date
+    var formatted = moment(repeat).format('dddd MMM Do');
 
-// $('#serving').append(nextMeet);
+    // appends the formatted date to the header element
+    nextMeet.append(formatted);
 
-    for (var i = 0; i < 1; i++) {
-        var repeat = moment(start).day(2 + 14);
-        console.log('start ' + start);
-        start = repeat;
-        // console.log('i ' + i);
-        // console.log('repeat ' + repeat);
-        // console.log('start ' + start);
-        var formatted = moment(repeat).format('dddd MMM Do');
-        // console.log('formatted ' + formatted);
-        nextMeet.append(formatted);
-        $('#serving').append(nextMeet);
-        $('#cuerpo').empty();
-    }
+    // appends header to its containing div
+    $('#serving').append(nextMeet);
+
 };
 
+// calls function
 getDates();
