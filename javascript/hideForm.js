@@ -31,27 +31,26 @@ console.log('day -> ' + day);
 
 // switch statement, tables get cleared according to the tuesday in the month
 switch (day) {
-    case 2:
-        // day > 2;
+    case 3:
+        // day > 3;
         console.log('first day -> ' + day);
         $('#first-body').hide();
         break;
-    case 9:
-                // day > 9;
+    case 10:
+        // day > 10;
         console.log('second day -> ' + day);
         $('#second-body').hide();
         break;
-    case 16:
-                // day > 16;
+    case 17:
+        // day > 16;
         console.log('third day -> ' + day);
         $('#third-body').hide();
         break;
-    case 23:
-                // day > 23;
+    case 24:
+        // day > 24;
         console.log('fourth day -> ' + day);
         $('#fourth-body').hide();
 };
-
 
 // clears table in order of tuesdays  USE IT IN CASE SWITCH DOES NOT WORK
 // console.log(moment().format('dddd'));
