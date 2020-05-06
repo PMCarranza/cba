@@ -32,18 +32,22 @@ console.log('day -> ' + day);
 // switch statement, tables get cleared according to the tuesday in the month
 switch (day) {
     case 2:
+        // day > 2;
         console.log('first day -> ' + day);
         $('#first-body').hide();
         break;
     case 9:
+                // day > 9;
         console.log('second day -> ' + day);
         $('#second-body').hide();
         break;
     case 16:
+                // day > 16;
         console.log('third day -> ' + day);
         $('#third-body').hide();
         break;
     case 23:
+                // day > 23;
         console.log('fourth day -> ' + day);
         $('#fourth-body').hide();
 };
