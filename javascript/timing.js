@@ -1,7 +1,7 @@
 'use strict';
 
 var servingDay = moment().day(2);
-console.log('servingDay ' + servingDay.toString());
+// console.log('servingDay ' + servingDay.toString());
 // dom element to append the next serving date
 var nextMeet = $('<h2>Join us on </h2>');
 
@@ -16,7 +16,7 @@ function getDates() {
     // if it is tuesday add a week to serving date
     if (servingDay === 2 || 9 || 16 || 23) {
         repeat = servingDay.add(1, 'week');
-        console.log('repeat ' + repeat.toString());
+        // console.log('repeat ' + repeat.toString());
     };
 
     // repeat = servingDay.add(1, 'week');
@@ -27,7 +27,7 @@ function getDates() {
 
     // appends the formatted date to the header element
     nextMeet.append(formatted);
-    console.log('formatted ' + formatted);
+    // console.log('formatted ' + formatted);
 
     // appends header to its containing div
     $('#serving').append(nextMeet);

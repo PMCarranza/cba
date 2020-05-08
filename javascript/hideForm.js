@@ -2,7 +2,7 @@
 
 // hide input form until yes is chosen
 $('.form').hide();
-// clearTable();
+clearTable();
 
 // fillable form to be shown only if something will be brought
 $('#yes').on('click', function () {
@@ -27,35 +27,21 @@ $('#no').on('click', function () {
 
 // variable gets the day of the week to use in the switch statement
 var day = (moment().day());
-console.log('day -> ' + day);
-
-// switch statement, tables get cleared according to the tuesday in the month
-switch (day) {
-    case 3:
-        // day > 3;
-        console.log('first day -> ' + day);
-        $('#first-body').hide();
-        break;
-    case 10:
-        // day > 10;
-        console.log('second day -> ' + day);
-        $('#second-body').hide();
-        break;
-    case 17:
-        // day > 16;
-        console.log('third day -> ' + day);
-        $('#third-body').hide();
-        break;
-    case 24:
-        // day > 24;
-        console.log('fourth day -> ' + day);
-        $('#fourth-body').hide();
-};
+// console.log('day -> ' + day);
 
 // clears table in order of tuesdays  USE IT IN CASE SWITCH DOES NOT WORK
-// console.log(moment().format('dddd'));
-// function clearTable() {
-//     if (moment().weekday() === 2) {
-//         $('#first-body').hide();
-//     };
-// };
+// console.log(moment().weekday());
+function clearTable() {
+    if (moment().weekday() >= 3) {
+        $('#first-body').hide();
+    } else if
+        (moment().weekday() >= 10) {
+            $('#second-body').hide();
+        
+    }    else if (moment().weekday() >= 17) {
+        $('#third-body').hide();
+    } else if
+        (moment().weekday() >= 24) {
+            $('#fourth-body').hide();
+    };
+};

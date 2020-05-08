@@ -18,7 +18,7 @@ var database = firebase.database();
 
 // getting last day of the month to delete db
 const lastDay = moment().endOf('month').format('MMM Do');
-console.log(lastDay);
+// console.log(lastDay);
 
 clearDb();
 
@@ -106,7 +106,7 @@ database.ref().on('child_added', function (snapshot) {
 
     // Handle the errors
 }, function (errorObject) {
-    console.log("Errors handled: " + errorObject.code);
+    // console.log("Errors handled: " + errorObject.code);
 });
 
 // clears db at the end of the month
