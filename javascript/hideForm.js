@@ -2,6 +2,7 @@
 
 // hide input form until yes is chosen
 $('.form').hide();
+$('#guidelines').hide();
 
 // fillable form to be shown only if something will be brought
 $('#yes').on('click', function () {
@@ -22,4 +23,13 @@ $('#no').on('click', function () {
     if (bring) {
         $('.form').hide();
     }
+});
+
+$('#read-guidelines').on('click', function () {
+    $('#guidelines').show();
+})
+
+$('#hide-guidelines').on('click', function () {
+    $('#guidelines').hide();
+    // $('#form').trigger('reset');
 });
