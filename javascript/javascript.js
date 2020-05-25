@@ -47,7 +47,7 @@ $('#fourth').on('click', function () {
 });
 
 
-// capturing info at subimt
+// capturing info at submit
 $('#submit').on('click', function (collect) {
     // if needed
     collect.preventDefault();
@@ -60,7 +60,7 @@ $('#submit').on('click', function (collect) {
 
     var bringing = $('#text-area').val().trim();
 
-    // code to be used w/o call to firebase
+    // code to be used w/o call to firebase (for testing)
     // var isComing = $('<td>').text(name);
     // var isBringing = $('<td>').text(bringing);
     // var newTr = $('<tr>');
@@ -109,9 +109,22 @@ database.ref().on('child_added', function (snapshot) {
     // console.log("Errors handled: " + errorObject.code);
 });
 
-// clears db at the end of the month
+// // clears db at the end of the month
+// function clearDb() {
+//     if (moment().format('MMM Do') === lastDay) {
+//         firebase.database().ref().remove();
+//     };
+// };
+
+
+// variable gets the day of the week to use in clearDb function after 4th tuesday
+var day = (moment().weekday(3).format('d'));
+var weekday = parseInt(day);
+
+// clears db after the 4th tuesday
 function clearDb() {
-    if (moment().format('MMM Do') === lastDay) {
+    if (weekday + 21 > 24) {
+        console.log('>23 last ' + weekday);
         firebase.database().ref().remove();
     };
 };

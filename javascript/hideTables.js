@@ -6,7 +6,7 @@ var weekday = parseInt(day);
 
 function clearTable() {
     if (weekday + 21 > 24) {
-        console.log('>23 last ' + weeday);
+        console.log('>23 last ' + weekday);
         $('#first-body').hide();
         $('#second-body').hide();
         $('#third-body').hide();
