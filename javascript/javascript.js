@@ -140,7 +140,7 @@ function findLastTuesday(startDate) {
         console.log('firstTuesday again-> ' + firstTuesday.format('MMM dd DD YYYY'));
     } else {
         lastTuesday = moment(lastTuesday).add(1, 'week');
-        console.log('firstTuesday plus one week-> ' + lastTuesday.format('MMM dd DD YYYY'));
+        // console.log('firstTuesday plus one week-> ' + lastTuesday.format('MMM dd DD YYYY'));
     }
 }
 
