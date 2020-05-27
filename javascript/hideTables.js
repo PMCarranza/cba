@@ -5,13 +5,7 @@ var day = (moment().weekday(3).format('d'));
 var weekday = parseInt(day);
 
 function clearTable() {
-    if (weekday + 21 > 24) {
-        console.log('>23 last ' + weekday);
-        $('#first-body').hide();
-        $('#second-body').hide();
-        $('#third-body').hide();
-        $('#fourth-body').hide();
-    } else if (weekday + 14 > 16) {
+    if (weekday + 14 > 16) {
         console.log('>16 third ' + weekday);
         $('#first-body').hide();
         $('#second-body').hide();
