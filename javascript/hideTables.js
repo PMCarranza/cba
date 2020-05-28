@@ -22,4 +22,4 @@ function clearTable() {
     };
 };
 
-clearTable();
+// clearTable();
