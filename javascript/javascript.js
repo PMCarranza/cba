@@ -23,7 +23,6 @@ var database = firebase.database();
 var firstTuesday = moment().startOf('month').startOf('week').add(2, 'd');
 console.log('firstTuesday -> ' + firstTuesday.format('MMM dd DD YYYY'));
 
-
 // function to find the first tuesday
 findLastTuesday();
 
@@ -37,20 +36,16 @@ $('#first').on('click', function () {
 $('#second').on('click', function () {
     event.preventDefault();
     whichTuesday = $('#second').val().trim();
-
 });
 $('#third').on('click', function () {
     event.preventDefault();
     whichTuesday = $('#third').val().trim();
-
 });
 
 $('#fourth').on('click', function () {
     event.preventDefault();
     whichTuesday = $('#fourth').val().trim();
-
 });
-
 
 // capturing info at submit
 $('#submit').on('click', function (collect) {
@@ -120,9 +115,8 @@ if the variable with the 4 week duration and the variable with the 4 weeks added
 delete the databae
 */
 function findLastTuesday(startDate) {
-
     // calculates the last tuesday of the month and passes it to the variable
-    var dayToDelete = moment().endOf('month').startOf('week').subtract(5, 'd');
+    var dayToDelete = moment().endOf('month').startOf('week').subtract(4, 'd');
     console.log('day to delete db ' + dayToDelete.format('MMM dd DD YYYY'));
 
     if (moment().isSame(dayToDelete)) {
@@ -132,7 +126,6 @@ function findLastTuesday(startDate) {
         console.log('DB was not cleared the date is -> ' + moment().format('MMM dd DD YYYY'));
     }
 }
-
 // clears db on the 4th tuesday
 function clearDb() {
     console.log('database has been cleared! ');
