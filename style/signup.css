@@ -129,6 +129,9 @@ div.dropdown.show > div:hover{
     margin: 5% 0;
 }
 
+.center-body{
+    margin: 5%;
+}
 .tablas{
     max-width: 100%;
 }
