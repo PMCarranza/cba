@@ -18,7 +18,7 @@ function getDates() {
     // creating dom element to append the next serving date
     $('#serving').append(nextMeet);
     // if it is tuesday add a week to serving date and append to dom
-    if (moment(today).isSame(2)) {
+    if (moment(today).isAfter(2)) {
         // add one week
         repeat = servingDay.add(1, 'week');
         // variable gets the formatted date
