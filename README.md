@@ -15,7 +15,7 @@ Among the key features you will find that Firebase is used to store the name of 
 jQuery handles the table population, moment.js updates the next serving date; after each tuesday of the month its corresponding table clears the information and is ready for the next time it is called upon.
 
 ## **Visuals**
-gif to come
+<img src="./images/cbagif.gif">
 
 ## **Roadmap**
 I will keep working on this project until is the best it can be.

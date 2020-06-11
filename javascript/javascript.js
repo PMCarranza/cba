@@ -21,7 +21,7 @@ var database = firebase.database();
 // console.log(lastDay);
 
 var firstTuesday = moment().startOf('month').startOf('week').add(2, 'd');
-console.log('firstTuesday -> ' + firstTuesday.format('MMM dd DD YYYY'));
+// console.log('firstTuesday -> ' + firstTuesday.format('MMM dd DD YYYY'));
 
 // function to find the first tuesday
 findLastTuesday();

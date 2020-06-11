@@ -1,7 +1,7 @@
 'use strict';
 
 var servingDay = moment().day(2);
-    console.log('servingDay ' + servingDay);
+// console.log('servingDay ' + servingDay.format('MMM dd DD YYYY'));
 
 // dom element to append the next serving date
 var nextMeet = $('<h2>Join us on </h2>');
@@ -10,7 +10,7 @@ var nextMeet = $('<h2>Join us on </h2>');
 var repeat;
 
 var today = moment().day();
-console.log('today ' + today);
+// console.log('today ' + today);
 
 // function gets the date of tuesday to serve
 function getDates() {
@@ -23,7 +23,7 @@ function getDates() {
         repeat = servingDay.add(1, 'week');
         // variable gets the formatted date
         var formatted = moment(repeat).format('dddd MMM Do');
-        console.log('formatted -> ' + formatted);
+        // console.log('formatted -> ' + formatted);
         // appends the formatted date to the header element
         nextMeet.append(formatted);
         // appends header to its containing div
