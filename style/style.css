@@ -40,10 +40,10 @@ body > nav{
 }
 
 .navigate .enlace:hover{
-    background-color: whitesmoke;
+    background-color: bisque;
     color: #4e5f35;
     text-decoration: none;
-    border-radius: 5%;
+    border-radius: 10px;
 }
 
 
@@ -138,12 +138,15 @@ span{
     margin: 2.5%;
 }
 #links > a{
+    padding: .5%;
     color: #47484d;
     font-weight: bold;
 }
 
 #links > a:hover{
-    color: #4e5f35;
+    padding: .5%;
+    background-color: #4e5f35;
+    color: bisque;
     text-decoration: none;    
 }
 
@@ -170,13 +173,17 @@ footer a{
 }
 
 footer a:hover{
-    color: #47484d;
+    color: bisque;
     text-decoration: none;
 }
 
 @media only screen and (max-width: 600px) {
 body {
     font-size: 12px;
+}
+
+.navigate{
+    font-size: 10px;
 }
 
 #verses{
