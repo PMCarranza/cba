@@ -147,6 +147,10 @@ span{
     text-decoration: none;    
 }
 
+#to-cal{
+    text-align: center;
+}
+
 footer{
     flex-shrink: 0;
     font-size: 2vw;
