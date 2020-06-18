@@ -1,7 +1,7 @@
 html{
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     background-size: auto;
     color: #47484d;
 }
@@ -11,6 +11,27 @@ body{
     display: flex;
     flex-direction: column;
     max-width: 100%;
+}
+
+.navigate{
+    margin-top: 1%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigate a{
+    padding: 1%;
+    color: #47484d;
+    font-weight: bold;
+    justify-items: right;
+    margin-right: 2.5%;
+}
+
+.navigate .enlace:hover{
+    background-color: bisque;
+    color: #4e5f35;
+    text-decoration: none;
+    border-radius: 10px;
 }
 
 #photo > img{
@@ -63,7 +84,46 @@ h2{
     background-color: #4e5f35;
     text-align: center;
     padding: .5%;
-    margin-bottom: 2.5%;
+    margin-bottom: 20%;
+}
+
+.tuesdays-text{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #47484d;
+}
+
+.tuesday-leaders{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #4e5f35;
+    font-weight: bold;
+}
+
+span{
+    color: #47484d;
+}
+
+
+#to-cal{
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+#to-cal > a{
+    font-size: 24px;
+    color: #4e5f35;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1.5%;
+}
+
+#to-cal > a:hover{
+    background-color: #47484d;
+    color: whitesmoke;
+    border-radius: 10px;
 }
 
 .content{
@@ -75,110 +135,18 @@ main{
     flex-direction: column;
 }
 
-#name{
-    font-size: 2vw;
-    max-width: 50%;
-    margin: 0 auto;
-    margin-bottom: 1.5%;
-}
-
-.botones{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-bottom: 2%;
-}
-
-#dropdownMenuButton{
-    font-size: 2vw;
-    background-color: #4e5f35;
-}
-
-#dropdownMenuButton:hover{
-    background-color: slategrey;
-    opacity: .5;
-}
-
-#form > div.botones > div.dropdown.show > div{
-    font-size: 2vw;
-    width: 100%;
-    text-align: center;
-    min-width: 0;
-}
-
-div.dropdown.show > div:hover{
-    background-color: slategrey;
-}
-
-#text-area{
-    font-size: 1.5vw;
-    width: 50%;
-    margin: 0 auto;
-}
-
-#boton{
-    margin-top: 5%;
+#calendar{
     display: flex;
     justify-content: center;
+    margin-bottom: 2.5%;
 }
 
-#submit{
-    font-size: 2vw;
-    padding: .5%;
-    width: 50%;
-    margin: 5% 0;
-}
-
-.center-body{
-    margin: 5%;
-}
-.tablas{
-    max-width: 100%;
-}
-
-.tr-head{
-    font-size: 2vw;
-    color: whitesmoke;
-    width: 100%;
-    background-color: #4e5f35;
-    text-align: center;
-    padding: .5%;
-    margin: 0;
-}
-
-table{
-    width: 100%;
-    font-size: 2vw;
-    margin-bottom: 5%;
-}
-
-th{
-    text-align: center;
-    color: whitesmoke;
-    background-color: slategray;
-    padding: .5%;
-}
-
-.th-name{
-    width: 33%;
-    border-right: 1px solid whitesmoke;
-}
-
-td{
-    padding: 0 2%;
-}
-
-tr:nth-child(odd) {
-    color: #47484d;
-    background: whitesmoke;
-}
-tr:nth-child(even) {
-    color: whitesmoke;
-    background-color: slategray;
-    opacity: .6;
+iframe{
+    width: 90%;
 }
 
 footer{
+    width: 100%;
     flex-shrink: 0;
     font-size: 2vw;
     color: whitesmoke;
@@ -197,6 +165,35 @@ footer a{
 }
 
 footer a:hover{
-    color: cyan;
+    color: bisque;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .navigate{
+        font-size: 10px;
+    }
+
+    .tuesdays-text{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .tuesday-leaders{
+        font-size: 12px;
+        display: inline-block;
+        text-align: center;
+    }
+
+
+    #to-cal > a{
+        font-size: 16px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 400px;
+    }
+
 }

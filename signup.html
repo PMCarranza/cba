@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>CBA Sign Up</title>
+    <title>CBA Calendar</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,15 +15,21 @@
 </head>
 
 <body>
+
     <div id="photo">
         <img src="./images/IMG_0321.jpg" alt="Armbruster family and Bethany" title="Armbruster family and Bethany">
     </div>
 
     <nav class="nav-bar">
+
         <div id="logo">
             <a href="https://churchbcc.org/north"><img src="./images/icon_square_dark-green.jpg" class=".img-fluid"
                     alt="BCC logo" title="BCC logo"></a>
         </div>
+        <nav class="navigate">
+            <a href="index.html" class="enlace">CBA Home</a>
+            <a href="./images/guidelines.pdf" class="enlace" target="_blank">Read the Guidelines</a>
+        </nav>
         <header>
             <h1 class="top-text">Community Breakfast on Aurora</h1>
         </header>
@@ -38,98 +44,31 @@
         <p id="nav-text">We meet at the North Office 16743 N. Aurora at 7:00am at the North Office</p>
     </div>
 
+
+
     <main class="content">
 
-        <form class="container" id='form'>
-
-            <div class="form-group">
-                <!-- <label for="exampleFormControlInput1">Email address</label> -->
-                <input type="text" class="form-control" id="name" placeholder="name">
-            </div>
-
-            <div class="botones">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Pick a Tuesday
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <button class="dropdown-item" id="first" value="first">First</button>
-                        <button class="dropdown-item" id="second" value="second">Second</button>
-                        <button class="dropdown-item" id="third" value="third">Third</button>
-                        <button class="dropdown-item" id="fourth" value="fourth">Fourth</button>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Are you bringing something?
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <button class="dropdown-item" id="yes" value="Yes">Yes</button>
-                        <button class="dropdown-item" id="no" value="No">No</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
-                <div class="form"><textarea class="form-control" id="text-area" rows="3"
-                        placeholder="What are you planning to bring?"></textarea>
-                </div>
-            </div>
-
-        </form>
-
-        <div id="boton">
-            <button type="submit" id="submit" class="btn btn-success">Submit</button>
+        <div class="tuesdays-text">
+            <p>Leaders by Tuesday:</p>
         </div>
 
-        <section class="center-body">
+        <div class="tuesday-leaders">
+            <p><span>1st Tuesday:</span> Scott</p>
+            <p><span>2nd Tuesday:</span> Mike</p>
+            <p><span>3rd Tuesday:</span> T B D</p>
+            <p><span>4th Tuesday:</span> Mariño</p>
+        </div>
 
-            <table class ="tablas">
-                <p class="tr-head">1st Tuesday with Scott</p>
-                <tr>
-                    <th class="th-name">Name</th>
-                    <th>Bringing</th>
-                </tr>
-                <tbody id="first-body">
-                </tbody>
-            </table>
+        <div id="to-cal">
+            <a href="https://calendar.google.com/calendar/r/week/2020/6/16?tab=rc" target="_blank">Go to calendar</a>
+        </div>
 
-            <table class ="tablas">
-                <p class="tr-head">2nd Tuesday with Mike</p>
-                <tr>
-                    <th class="th-name">Name</th>
-                    <th>Bringing</th>
-                </tr>
-                <tbody id="second-body">
-                </tbody>
-            </table>
+        <div id="calendar">
+            <iframe
+                src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=c28ybXN1ZDg1ZWFldGNuMzk3NTU2bnFuNjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23F6BF26&amp;showTz=0&amp;showCalendars=0&amp;showTabs=0&amp;showDate=1&amp;showTitle=0&amp;showNav=1"
+                style="border-width:0" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
 
-            <table class ="tablas">
-                <p class="tr-head">3rd Tuesday with The Practicing Church</p>
-                <tr>
-                    <th class="th-name">Name</th>
-                    <th>Bringing</th>
-                </tr>
-                <tbody id="third-body">
-                </tbody>
-            </table>
-
-            <table class ="tablas">
-                <p class="tr-head">4th Tuesday with Mariño</p>
-                <tr>
-                    <th class="th-name">Name</th>
-                    <th>Bringing</th>
-                </tr>
-                <tbody id="fourth-body">
-                </tbody>
-            </table>
-
-        </section>
-        
     </main>
 
     <footer class="footer">
@@ -139,8 +78,6 @@
     </footer>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -157,10 +94,10 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="./javascript/hideTables.js"></script>
+    <!-- <script src="./javascript/hideTables.js"></script> -->
     <script src="./javascript/timing.js"></script>
-    <script src="./javascript/hideForm.js"></script>
-    <script src="./javascript/javascript.js"></script>
+    <!-- <script src="./javascript/hideForm.js"></script> -->
+    <!-- <script src="./javascript/javascript.js"></script> -->
 </body>
 
 </html>

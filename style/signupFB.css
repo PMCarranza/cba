@@ -1,0 +1,202 @@
+html{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-size: auto;
+    color: #47484d;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+#photo > img{
+    max-width: 100%;
+    opacity: .6;
+    position: absolute;
+    z-index: -2;
+}
+
+#logo{
+    width: 10%;
+    float: left;
+}
+
+#logo > a > img{
+    width: 100%;
+    margin: 8%;
+}
+
+header{
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    margin: 2%;
+}
+
+.top-text{
+    font-size: 5vw;
+    color:whitesmoke;
+    -webkit-text-stroke: .2vw whitesmoke;
+    text-shadow: 1vw 1vw 1vw black;
+}
+
+h2{
+    color: bisque;
+    font-size: 4vw;
+    -webkit-text-stroke: .15vw bisque;
+    text-align: center;
+    /* background-color: #4e5f35; */
+    text-shadow: 1vw 1vw 1vw black;
+    padding: 1%;
+    margin: 0;
+}
+
+#nav-text{
+    font-size: 2vw;
+    color: whitesmoke;
+    background-color: #4e5f35;
+    text-align: center;
+    padding: .5%;
+    margin-bottom: 2.5%;
+}
+
+.content{
+    flex: 1 0 auto;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+#name{
+    font-size: 2vw;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.5%;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+}
+
+#dropdownMenuButton{
+    font-size: 2vw;
+    background-color: #4e5f35;
+}
+
+#dropdownMenuButton:hover{
+    background-color: slategrey;
+    opacity: .5;
+}
+
+#form > div.botones > div.dropdown.show > div{
+    font-size: 2vw;
+    width: 100%;
+    text-align: center;
+    min-width: 0;
+}
+
+div.dropdown.show > div:hover{
+    background-color: slategrey;
+}
+
+#text-area{
+    font-size: 1.5vw;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#boton{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+#submit{
+    font-size: 2vw;
+    padding: .5%;
+    width: 50%;
+    margin: 5% 0;
+}
+
+.center-body{
+    margin: 5%;
+}
+.tablas{
+    max-width: 100%;
+}
+
+.tr-head{
+    font-size: 2vw;
+    color: whitesmoke;
+    width: 100%;
+    background-color: #4e5f35;
+    text-align: center;
+    padding: .5%;
+    margin: 0;
+}
+
+table{
+    width: 100%;
+    font-size: 2vw;
+    margin-bottom: 5%;
+}
+
+th{
+    text-align: center;
+    color: whitesmoke;
+    background-color: slategray;
+    padding: .5%;
+}
+
+.th-name{
+    width: 33%;
+    border-right: 1px solid whitesmoke;
+}
+
+td{
+    padding: 0 2%;
+}
+
+tr:nth-child(odd) {
+    color: #47484d;
+    background: whitesmoke;
+}
+tr:nth-child(even) {
+    color: whitesmoke;
+    background-color: slategray;
+    opacity: .6;
+}
+
+footer{
+    flex-shrink: 0;
+    font-size: 2vw;
+    color: whitesmoke;
+    background-color: #4e5f35;
+}
+
+footer > p{
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer a{
+    color: whitesmoke;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: cyan;
+    text-decoration: none;
+}
