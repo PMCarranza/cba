@@ -13,6 +13,27 @@ body{
     max-width: 100%;
 }
 
+.navigate{
+    margin-top: 1%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigate a{
+    padding: 1%;
+    color: #4e5f35;
+    font-weight: bold;
+    justify-items: right;
+    margin-right: 2.5%;
+}
+
+.navigate .enlace:hover{
+    background-color: bisque;
+    color: #47484d;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
 #photo > img{
     max-width: 100%;
     opacity: .6;
@@ -99,17 +120,6 @@ main{
     opacity: .5;
 }
 
-#form > div.botones > div.dropdown.show > div{
-    font-size: 2vw;
-    width: 100%;
-    text-align: center;
-    min-width: 0;
-}
-
-div.dropdown.show > div:hover{
-    background-color: slategrey;
-}
-
 #text-area{
     font-size: 1.5vw;
     width: 50%;
@@ -122,6 +132,15 @@ div.dropdown.show > div:hover{
     justify-content: center;
 }
 
+.center-body{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+#calendario{
+    margin: 0 auto;
+}
+
 #submit{
     font-size: 2vw;
     padding: .5%;
@@ -129,9 +148,6 @@ div.dropdown.show > div:hover{
     margin: 5% 0;
 }
 
-.center-body{
-    margin: 5%;
-}
 .tablas{
     max-width: 100%;
 }
@@ -160,7 +176,7 @@ th{
 }
 
 .th-name{
-    width: 33%;
+    width: 25%;
     border-right: 1px solid whitesmoke;
 }
 
@@ -176,6 +192,19 @@ tr:nth-child(even) {
     color: whitesmoke;
     background-color: slategray;
     opacity: .6;
+}
+
+#table-body > tr:nth-child(odd) > button{
+    border-style: none;
+    background: whitesmoke;
+}
+
+#table-body > tr:nth-child(even) > button{
+    border-style: none;
+}
+
+i{
+    color: red;
 }
 
 footer{

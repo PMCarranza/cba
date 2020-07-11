@@ -2,13 +2,13 @@
 
 // configuring firebase
 var firebaseConfig = {
-    apiKey: "AIzaSyDhNmbTZWrHTqKgtArs2VVbQtXr3u-uMSo",
-    authDomain: "bcc-cba.firebaseapp.com",
-    databaseURL: "https://bcc-cba.firebaseio.com",
-    projectId: "bcc-cba",
-    storageBucket: "bcc-cba.appspot.com",
-    messagingSenderId: "161391316380",
-    appId: "1:161391316380:web:39048cd5a8a8a0a7398c59"
+    apiKey: 'AIzaSyDhNmbTZWrHTqKgtArs2VVbQtXr3u-uMSo',
+    authDomain: 'bcc-cba.firebaseapp.com',
+    databaseURL: 'https://bcc-cba.firebaseio.com',
+    projectId: 'bcc-cba',
+    storageBucket: 'bcc-cba.appspot.com',
+    messagingSenderId: '161391316380',
+    appId: '1:161391316380:web:39048cd5a8a8a0a7398c59'
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -16,35 +16,25 @@ firebase.initializeApp(firebaseConfig);
 // variable to reference db
 var database = firebase.database();
 
-// getting last day of the month to delete db
-// const lastDay = moment().endOf('month').format('MMM Do');
-// console.log(lastDay);
-
 var firstTuesday = moment().startOf('month').startOf('week').add(2, 'd');
 // console.log('firstTuesday -> ' + firstTuesday.format('MMM dd DD YYYY'));
 
 // function to find the first tuesday
-findLastTuesday();
+// findLastTuesday();
 
-// variable to capture value from tuesday choice
 var whichTuesday;
+var dayPicked;
+var key;
+var toDelete;
 
-$('#first').on('click', function () {
-    event.preventDefault();
-    whichTuesday = $('#first').val().trim();
-});
-$('#second').on('click', function () {
-    event.preventDefault();
-    whichTuesday = $('#second').val().trim();
-});
-$('#third').on('click', function () {
-    event.preventDefault();
-    whichTuesday = $('#third').val().trim();
-});
+var trashCan = '<button id="delete"><i class="fa fa-trash-o"></i></button>';
 
-$('#fourth').on('click', function () {
-    event.preventDefault();
-    whichTuesday = $('#fourth').val().trim();
+$(function () {
+    $('#datepicker').datepicker();
+
+    $('#datepicker').on('change paste keyup', function () {
+        whichTuesday = ($(this).val());
+    });
 });
 
 // capturing info at submit
@@ -59,6 +49,8 @@ $('#submit').on('click', function (collect) {
     };
 
     var bringing = $('#text-area').val().trim();
+
+    // servingTuesday = whichTuesday;
 
     // code to be used w/o call to firebase (for testing)
     // var isComing = $('<td>').text(name);
@@ -97,37 +89,59 @@ database.ref().on('child_added', function (snapshot) {
 
     var dbName = $('<td>').text(sv.name);
     var dbBringing = $('<td>').text(sv.bringing);
-    var dbDay = sv.day;
+    var dbDay = $('<td>').text(sv.day);
 
-    newTr.append(dbName, dbBringing);
+    newTr.append(dbName, dbDay, dbBringing, trashCan);
 
-    $('#' + dbDay + '-body').append(newTr);
+    // console.log('sv ', sv);
+    // console.log('snapshot ', snapshot.key);
+    toDelete = snapshot.key;
+
+    $('#table-body').append(newTr);
 
     // Handle the errors
 }, function (errorObject) {
-    console.log("Errors handled: " + errorObject.code);
+    console.log('Errors handled: ' + errorObject.code);
 });
 
 /*function finds the first tuesday of the month,
 adds variable with a duration of 4 weeks
 adds variable which gets the value of the first tuesday + four weeks
 if the variable with the 4 week duration and the variable with the 4 weeks added match
-delete the databae
+delete the database
 */
-function findLastTuesday(startDate) {
-    // calculates the last tuesday of the month and passes it to the variable
-    var dayToDelete = moment().endOf('month').startOf('week').subtract(4, 'd');
-    console.log('day to delete db ' + dayToDelete.format('MMM dd DD YYYY'));
+// function findLastTuesday(startDate) {
+//     // calculates the last tuesday of the month and passes it to the variable
+//     var dayToDelete = moment().endOf('month').startOf('week').subtract(4, 'd');
+//     console.log('day to delete db ' + dayToDelete.format('MMM dd DD YYYY'));
 
-    if (moment().isSame(dayToDelete)) {
-        console.log('clears db and resets first tuesday');
-        clearDb();
-    } else {
-        console.log('DB was not cleared the date is -> ' + moment().format('MMM dd DD YYYY'));
-    }
-}
+//     if (moment().isSame(dayToDelete)) {
+//         console.log('clears db and resets first tuesday');
+//         clearDb();
+//     } else {
+//         console.log('DB was not cleared the date is -> ' + moment().format('MMM dd DD YYYY'));
+//     }
+// }
 // clears db on the 4th tuesday
-function clearDb() {
-    console.log('database has been cleared! ');
-    firebase.database().ref().remove();
-};
+// function clearDb() {
+//     console.log('database has been cleared! ');
+//     firebase.database().ref().remove();
+// };
+
+$('#table-body').on('click', function () {
+    console.log('trash clicked')
+    var adaRef = firebase.database().ref(toDelete);
+    // console.log('adaRef ' + adaRef);
+    // key = adaRef.key;  // key === 'ada'
+    // console.log('todelete ', toDelete);
+    // key = adaRef.child('bringing/day/name').key;  // key === 'last'
+    // console.log('key ' + key);
+    adaRef.remove()
+        .then(function () {
+            console.log('Remove succeeded.');
+            location.reload();
+        })
+        .catch(function (error) {
+            console.log('Remove failed: ' + error.message)
+        });
+});

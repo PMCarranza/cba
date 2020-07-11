@@ -10,7 +10,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./style/signup.css">
+    <link rel="stylesheet" type="text/css" href="./style/signupFB.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -24,6 +26,10 @@
             <a href="https://churchbcc.org/north"><img src="./images/icon_square_dark-green.jpg" class=".img-fluid"
                     alt="BCC logo" title="BCC logo"></a>
         </div>
+        <nav class="navigate">
+            <a href="index.html" class="enlace">CBA Home</a>
+            <a href="./images/guidelines.pdf" class="enlace" target="_blank">Read the Guidelines</a>
+        </nav>
         <header>
             <h1 class="top-text">Community Breakfast on Aurora</h1>
         </header>
@@ -51,25 +57,11 @@
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Pick a Tuesday
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <button class="dropdown-item" id="first" value="first">First</button>
-                        <button class="dropdown-item" id="second" value="second">Second</button>
-                        <button class="dropdown-item" id="third" value="third">Third</button>
-                        <button class="dropdown-item" id="fourth" value="fourth">Fourth</button>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Are you bringing something?
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <button class="dropdown-item" id="yes" value="Yes">Yes</button>
-                        <button class="dropdown-item" id="no" value="No">No</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -82,54 +74,31 @@
 
         </form>
 
-        <div id="boton">
-            <button type="submit" id="submit" class="btn btn-success">Submit</button>
-        </div>
-
         <section class="center-body">
 
-            <table class ="tablas">
-                <p class="tr-head">1st Tuesday with Scott</p>
-                <tr>
-                    <th class="th-name">Name</th>
-                    <th>Bringing</th>
-                </tr>
-                <tbody id="first-body">
-                </tbody>
-            </table>
+            <div id="calendario">
+                <div id="datepicker"></div>
+                <div id="calendar"></div>
+            </div>
 
-            <table class ="tablas">
-                <p class="tr-head">2nd Tuesday with Mike</p>
-                <tr>
-                    <th class="th-name">Name</th>
-                    <th>Bringing</th>
-                </tr>
-                <tbody id="second-body">
-                </tbody>
-            </table>
+            <div id="boton">
+                <button type="submit" id="submit" class="btn btn-success">Submit</button>
+            </div>
 
-            <table class ="tablas">
-                <p class="tr-head">3rd Tuesday with The Practicing Church</p>
+            <table class="tablas">
                 <tr>
                     <th class="th-name">Name</th>
+                    <th class="th-name">Date chosen</th>
                     <th>Bringing</th>
+                    <th></th>
                 </tr>
-                <tbody id="third-body">
-                </tbody>
-            </table>
 
-            <table class ="tablas">
-                <p class="tr-head">4th Tuesday with Mariño</p>
-                <tr>
-                    <th class="th-name">Name</th>
-                    <th>Bringing</th>
-                </tr>
-                <tbody id="fourth-body">
+                <tbody id="table-body">
                 </tbody>
             </table>
 
         </section>
-        
+
     </main>
 
     <footer class="footer">
@@ -157,10 +126,13 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="./javascript/hideTables.js"></script>
+    <!-- <script src="./javascript/hideTables.js"></script> -->
     <script src="./javascript/timing.js"></script>
     <script src="./javascript/hideForm.js"></script>
     <script src="./javascript/javascript.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </body>
 
 </html>
