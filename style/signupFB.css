@@ -148,6 +148,25 @@ main{
     margin: 5% 0;
 }
 
+.tuesdays-text{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #47484d;
+}
+
+.tuesday-leaders{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #4e5f35;
+    font-weight: bold;
+}
+
+span{
+    color: #47484d;
+}
+
 .tablas{
     max-width: 100%;
 }
@@ -228,4 +247,22 @@ footer a{
 footer a:hover{
     color: cyan;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .navigate{
+        font-size: 10px;
+    }
+
+    .tuesdays-text{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .tuesday-leaders{
+        font-size: 12px;
+        display: inline-block;
+        text-align: center;
+    }
 }
