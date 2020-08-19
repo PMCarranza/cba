@@ -19,14 +19,15 @@ var database = firebase.database();
 var firstTuesday = moment().startOf('month').startOf('week').add(2, 'd');
 // console.log('firstTuesday -> ' + firstTuesday.format('MMM dd DD YYYY'));
 
-// function to find the first tuesday
-// findLastTuesday();
+// function to find the last tuesday
+findLastTuesday();
 
 var whichTuesday;
 var dayPicked;
 var key;
 var toDelete;
 
+//// code to append trash can has been commented out in in line 97
 var trashCan = '<button id="delete"><i class="fa fa-trash-o"></i></button>';
 
 $(function () {
@@ -91,7 +92,12 @@ database.ref().on('child_added', function (snapshot) {
     var dbBringing = $('<td>').text(sv.bringing);
     var dbDay = $('<td>').text(sv.day);
 
-    newTr.append(dbName, dbDay, dbBringing, trashCan);
+    
+    //// TO BE ADDED WHEN TRASH CAN BUTTON IS WORKING
+    // newTr.append(dbName, dbDay, dbBringing, trashCan);
+
+    newTr.append(dbName, dbDay, dbBringing);
+
 
     // console.log('sv ', sv);
     // console.log('snapshot ', snapshot.key);
@@ -110,23 +116,23 @@ adds variable which gets the value of the first tuesday + four weeks
 if the variable with the 4 week duration and the variable with the 4 weeks added match
 delete the database
 */
-// function findLastTuesday(startDate) {
-//     // calculates the last tuesday of the month and passes it to the variable
-//     var dayToDelete = moment().endOf('month').startOf('week').subtract(4, 'd');
-//     console.log('day to delete db ' + dayToDelete.format('MMM dd DD YYYY'));
+function findLastTuesday(startDate) {
+    // calculates the last tuesday of the month and passes it to the variable
+    var dayToDelete = moment().endOf('month').startOf('week').subtract(4, 'd');
+    console.log('day to delete db ' + dayToDelete.format('MMM dd DD YYYY'));
 
-//     if (moment().isSame(dayToDelete)) {
-//         console.log('clears db and resets first tuesday');
-//         clearDb();
-//     } else {
-//         console.log('DB was not cleared the date is -> ' + moment().format('MMM dd DD YYYY'));
-//     }
-// }
-// clears db on the 4th tuesday
-// function clearDb() {
-//     console.log('database has been cleared! ');
-//     firebase.database().ref().remove();
-// };
+    if (moment().isSame(dayToDelete)) {
+        console.log('clears db and resets first tuesday');
+        clearDb();
+    } else {
+        console.log('DB was not cleared the date is -> ' + moment().format('MMM dd DD YYYY'));
+    }
+}
+//// clears db on the 4th tuesday
+function clearDb() {
+    console.log('database has been cleared! ');
+    firebase.database().ref().remove();
+};
 
 $('#table-body').on('click', function () {
     console.log('trash clicked')
