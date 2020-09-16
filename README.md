@@ -9,10 +9,10 @@ The app allows volunteers to sign up for a tuesday of their choosing on any give
 
 ## **Usage**
 
-Once the volunteers have reached the page https://pmcarranza.github.io/cba/ they enter their name, choose a tuesday from a drop down with 4 options, if the choose to provide something for the day selected after selecting 'Yes' the form will appear and they can type what will be provided; after submiting their name will appear on the table corresponding to their tuesday choice along with what they are providing (if 'Yes' was chosen).
+Once the volunteers have reached the page https://pmcarranza.github.io/cba/ they enter their name, choose a tuesday from calendar, if they choose to provide something for the day selected after selecting 'Yes' the form will appear and they can type what will be providing; after clicking the submit button their name will appear on the table along with what they are providing (if 'Yes' was chosen).
 
-Among the key features you will find that Firebase is used to store the name of the volunteer, the tuesday they want to serve and what they are providing.
-jQuery handles the table population, moment.js updates the next serving date; after each tuesday of the month its corresponding table clears the information and is ready for the next time it is called upon.
+Among the key features you will find that Firebase is used to store the name of the volunteer, the date they want to serve and what they are providing.
+jQuery handles the table population, moment.js updates the next serving date; the database is deleted after the last tuesday of each month.
 
 ## **Visuals**
 <img src="./images/cbagif.gif">
