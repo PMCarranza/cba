@@ -118,10 +118,10 @@ delete the database
 */
 function findLastTuesday(startDate) {
     // calculates the last tuesday of the month and passes it to the variable
-    var dayToDelete = moment().endOf('month').startOf('week').subtract(4, 'd');
+    var dayToDelete = moment().endOf('month').endOf('week').subtract(4, 'd');
     console.log('day to delete db ' + dayToDelete.format('MMM dd DD YYYY'));
 
-    if (moment().isSame(dayToDelete)) {
+    if (moment().endOf('month').endOf('week').subtract(4, 'd').isSame(dayToDelete)) {
         console.log('clears db and resets first tuesday');
         clearDb();
     } else {
@@ -134,20 +134,23 @@ function clearDb() {
     firebase.database().ref().remove();
 };
 
-$('#table-body').on('click', function () {
-    console.log('trash clicked')
-    var adaRef = firebase.database().ref(toDelete);
-    // console.log('adaRef ' + adaRef);
-    // key = adaRef.key;  // key === 'ada'
-    // console.log('todelete ', toDelete);
-    // key = adaRef.child('bringing/day/name').key;  // key === 'last'
-    // console.log('key ' + key);
-    adaRef.remove()
-        .then(function () {
-            console.log('Remove succeeded.');
-            location.reload();
-        })
-        .catch(function (error) {
-            console.log('Remove failed: ' + error.message)
-        });
-});
+
+// //  ADD WHEN TRASH CAN IS WORKING
+
+// $('#table-body').on('click', function () {
+//     console.log('trash clicked')
+//     var adaRef = firebase.database().ref(toDelete);
+//     // console.log('adaRef ' + adaRef);
+//     // key = adaRef.key;  // key === 'ada'
+//     // console.log('todelete ', toDelete);
+//     // key = adaRef.child('bringing/day/name').key;  // key === 'last'
+//     // console.log('key ' + key);
+//     adaRef.remove()
+//         .then(function () {
+//             console.log('Remove succeeded.');
+//             location.reload();
+//         })
+//         .catch(function (error) {
+//             console.log('Remove failed: ' + error.message)
+//         });
+// });
