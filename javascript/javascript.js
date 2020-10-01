@@ -17,7 +17,7 @@ firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 
 var firstTuesday = moment().startOf('month').startOf('week').add(2, 'd');
-// console.log('firstTuesday -> ' + firstTuesday.format('MMM dd DD YYYY'));
+// console.log('firstTuesday -> ' + firstTuesday.format('MMM DD YYYY'));
 
 // function to find the last tuesday
 findLastTuesday();
@@ -119,13 +119,14 @@ delete the database
 function findLastTuesday(startDate) {
     // calculates the last tuesday of the month and passes it to the variable
     var dayToDelete = moment().endOf('month').endOf('week').subtract(4, 'd');
-    console.log('day to delete db ' + dayToDelete.format('MMM dd DD YYYY'));
+    console.log('day to delete db ' + dayToDelete.format('MMM DD YYYY'));
 
-    if (moment().endOf('month').endOf('week').subtract(4, 'd').isSame(dayToDelete)) {
+    if (dayToDelete.isSame(moment().format('MMM DD YYYY'))) {
+        console.log(moment().format('MMM DD YYYY'));
         console.log('clears db and resets first tuesday');
         clearDb();
     } else {
-        console.log('DB was not cleared the date is -> ' + moment().format('MMM dd DD YYYY'));
+        console.log('DB was not cleared the date is -> ' + moment().format('MMM DD YYYY'));
     }
 }
 //// clears db on the 4th tuesday
