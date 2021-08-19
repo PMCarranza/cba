@@ -1,4 +1,4 @@
-# **COMMUNITY BREAKFAST ON AURORA**
+## **COMMUNITY BREAKFAST ON AURORA**
 Sign Up App
 
 
@@ -9,7 +9,9 @@ The app allows volunteers to sign up for a tuesday of their choosing on any give
 
 ## **Usage**
 
-Once the volunteers have reached the page https://pmcarranza.github.io/cba/ they enter their name, choose a tuesday from calendar, if they choose to provide something for the day selected after selecting 'Yes' the form will appear and they can type what will be providing; after clicking the submit button their name will appear on the table along with what they are providing (if 'Yes' was chosen).
+There are two option for this app, the first (and chosen as the default one), allows the volunteers to find out what the ministry is about, includes a link to the guidelines and a link to a google calendar to sign up.
+
+The second option (not used at the moment but there is gif showing how it works) allows the volunteers to enter their name, choose a tuesday from calendar, if they choose to provide something for the day selected after selecting 'Yes' the form will appear and they can type what will be providing; after clicking the submit button their name will appear on the table along with what they are providing (if 'Yes' was chosen).
 
 Among the key features you will find that Firebase is used to store the name of the volunteer, the date they want to serve and what they are providing.
 jQuery handles the table population, moment.js updates the next serving date; the database is deleted after the last tuesday of each month.
